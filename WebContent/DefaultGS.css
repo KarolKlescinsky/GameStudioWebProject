@@ -1,0 +1,202 @@
+@CHARSET "UTF-8";
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+body {
+	background-color: #3399ff;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+h1 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 250%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #e7e7e7;
+	background-color: rgb(23, 183, 230);
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: #666;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li
+
+ 
+
+a
+
+
+:hover
+
+
+:not
+
+ 
+
+(
+.active
+
+ 
+
+)
+{
+background-color
+
+
+:
+
+ 
+
+#fff
+
+
+;
+/*     zaznacenie pozadia */
+}
+li a.active {
+	color: #4CAF50;
+	background-color: #4CAF50;
+}
+
+.numberText {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#Minesweeper {
+	align: center;
+	margin-left: 125px;
+}
+
+#statsTable {
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+#restart {
+	text-align: center;
+}
+
+.leftPart {
+	float: left;
+	/* 	min-width: 50%; */
+}
+
+#leftPartGuess {
+	float: left;
+	min-width: 30%;
+}
+
+.out {
+	align: center;
+	text-align: center;
+}
+
+.rightPart {
+	float: left;
+	/* 	min-width: 50%; */
+}
+
+#Stones {
+	font-family: cursive;
+	font-size: 250%;
+	align: center;
+}
+
+#arrow {
+	align: center;
+}
+
+#arrow1 {
+	align: center;
+}
+
+#textMinesweeper {
+	text-align: center;
+}
+
+a.restartGame:link, a.restartGame:visited {
+	background-color: white;
+	color: black;
+	border: 2px solid green;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a.restartGame:hover, a.restartGame:active {
+	background-color: green;
+	color: white;
+}
+
+}
+#printTable {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	float: left;
+	min-width: 50%;
+}
+
+#printTable td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#printTable tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#printTable tr:hover {
+	background-color: #ddd;
+}
+
+#printTable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}

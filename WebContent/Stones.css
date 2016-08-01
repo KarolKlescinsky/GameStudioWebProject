@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image: url("image/stones_backgrounds.jpg");
+}
+
+td {
+	font-size: 200%;
+}
+
+tr {
+	font-size: 200%;
+}
+
+/* img { */
+/*     display: block; */
+/*     margin: auto; */
+/* } */
+
+.arrow1 {
+	align: center;
+	width: 10%;
+    display: block;
+    margin: auto;
+}
+
+.arrow {
+	align: center;
+	width: 4%;
+    display: block;
+    margin: auto;
+}
