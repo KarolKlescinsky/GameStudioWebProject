@@ -89,6 +89,7 @@ public class MainServlet extends HttpServlet {
 				request.setAttribute("hideLoginTable", "hidden");
 				login.forward(request, response);
 				break;
+				
 			}
 			if ("logMe".equals(request.getParameter("gameName"))
 					&& !request.getParameter("userName").trim().isEmpty()) {
@@ -96,6 +97,7 @@ public class MainServlet extends HttpServlet {
 				session.setAttribute("player", request.getParameter("userName"));
 				request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
 			}
+
 
 		} else {
 			request.setAttribute("hideTables", "hidden");

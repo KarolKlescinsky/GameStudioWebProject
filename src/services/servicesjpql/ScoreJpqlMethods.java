@@ -71,7 +71,11 @@ public class ScoreJpqlMethods {
 		EntityManager em = JpaHelper.getEntityManager();
 		Query query = em.createQuery("Select MAX(s.score) from ScoreJPQL s where s.game =:gameID");
 		query.setParameter("gameID", new UsefullServicesJpqlMethods().findGameObjectbyID(gameName));
-		return (int) query.getSingleResult();
+		if (query.getSingleResult()==null) {
+			return 0;			
+		}else{
+			return (int) query.getSingleResult();
+		}
 	}
 	
 
