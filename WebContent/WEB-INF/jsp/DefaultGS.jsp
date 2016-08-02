@@ -17,6 +17,7 @@
 		<li><a href="?gameName=Stones">Stones</a></li>
 		<li><a href="?gameName=Minesweeper">Minesweeper</a></li>
 		<li><a href="?gameName=GuessTheNumber">GuessTheNumber</a></li>
+		<li><a href="?gameName=hangman">HangMan</a></li>
 		<li><a href="?gameName=Login">Login</a></li>
 	</ul>
 	<br>
