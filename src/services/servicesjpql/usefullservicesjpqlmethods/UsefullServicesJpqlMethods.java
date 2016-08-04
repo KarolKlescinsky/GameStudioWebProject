@@ -99,16 +99,31 @@ public class UsefullServicesJpqlMethods {
 		Integer number = (int) (long) query.getSingleResult();
 		return number;
 	}
-	
-	public void addPlayerToDatabase(PlayerJPQL player){
+
+	public void addPlayerToDatabase(PlayerJPQL player) {
 		JpaHelper.beginTransaction();
 		EntityManager em = JpaHelper.getEntityManager();
 		em.persist(player);
 		JpaHelper.commitTransaction();
 	}
-	
-	public void playerToDatabaseJpql(String playerName, String playerPwd){
-		addPlayerToDatabase(new PlayerJPQL(playerName,playerPwd));
+
+	public void playerToDatabaseJpql(String playerName, String playerPwd) {
+		addPlayerToDatabase(new PlayerJPQL(playerName, playerPwd));
+	}
+
+	public boolean isUserRegistered(String playerName, String playerPwd) {
+		EntityManager em = JpaHelper.getEntityManager();
+		Query query = em.createQuery(
+				"Select p.playerName FROM PlayerJPQL p Where p.playerName=:playerName & p.playerPwd=:playerPwd");
+		query.setParameter("playerName", playerName);
+		query.setParameter("playerPwd", playerPwd);
+
+		if (query.getResultList().isEmpty()) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 }

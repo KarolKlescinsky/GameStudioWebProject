@@ -108,12 +108,12 @@ public class MainServlet extends HttpServlet {
 				
 				
 			}
-			if ("logMe".equals(request.getParameter("gameName"))
-					&& !request.getParameter("userName").trim().isEmpty()) {
-
-				session.setAttribute("player", request.getParameter("userName"));
-				request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
-			}
+//			if ("logMe".equals(request.getParameter("gameName"))
+//					&& !request.getParameter("userName").trim().isEmpty()) {
+//
+//				session.setAttribute("player", request.getParameter("userName"));
+//				request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
+//			}
 
 
 		} else {

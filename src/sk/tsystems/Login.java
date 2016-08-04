@@ -2,6 +2,7 @@ package sk.tsystems;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,12 +22,29 @@ public class Login extends HttpServlet {
 		response.setContentType("text/html");
 		HttpSession session = request.getSession();
 			
+		String action = request.getParameter("action");
 
-		if (request.getParameter("playerName")!=null) {
-			session.setAttribute("playerName", request.getParameter("playerName"));
-			session.setAttribute("password1", request.getParameter("password1"));
-			new UsefullServicesJpqlMethods().playerToDatabaseJpql(request.getParameter("playerName"), request.getParameter("password1"));
-			session.setAttribute("isUserRegistred", "hidden");
+//		
+//		if ("login".equals(action) && "userName" != null && "userPassword" != null) {
+//
+//			user = new UsefullServicesJpqlMethods()
+//			session = request.getSession();
+//			session.setAttribute("user", user);
+//			
+//		} else  if("registration".equals(action) && "userName" != null && "userPassword" != null) {
+//			
+//		}
+//
+//		if (request.getParameter("playerName")!=null) {
+//			session.setAttribute("playerName", request.getParameter("playerName"));
+//			new UsefullServicesJpqlMethods().playerToDatabaseJpql(request.getParameter("playerName"), request.getParameter("password1"));
+//			session.setAttribute("isUserRegistred", "hidden");
+//		}
+		
+		if(new UsefullServicesJpqlMethods().isUserRegistered(request.getParameter("playerName"), request.getParameter("password1"))){
+			
+		} else {
+			
 		}
 		
 		
@@ -68,6 +86,8 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+
 	
 
 }
