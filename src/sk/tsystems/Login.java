@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import services.servicesjpql.usefullservicesjpqlmethods.UsefullServicesJpqlMethods;
+
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -18,10 +20,15 @@ public class Login extends HttpServlet {
 
 		response.setContentType("text/html");
 		HttpSession session = request.getSession();
-																																	
-		if (session.getAttribute("userName") == null) {
-			request.setAttribute("userName", true);
+			
+		
+		if (request.getParameter("playerName")!=null) {
+			session.setAttribute("playerName", request.getParameter("playerName"));
+			session.setAttribute("password1", request.getParameter("password1"));
+			new UsefullServicesJpqlMethods().playerToDatabaseJpql(request.getParameter("playerName"), request.getParameter("password1"));
+			session.setAttribute("isUserRegistred", "hidden");
 		}
+		
 		
 	//	request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
 
@@ -35,6 +42,25 @@ public class Login extends HttpServlet {
 //			out.print("</div>");
 
 
+		
+//		 if(checkPlayerName(request, request.getParameter("playerName"))&& checkPlayerPassword(request, request.getParameter("password1"))){
+//				
+//				
+//				if(new PlayerServiceJPQL().checkExistPlayer(request.getParameter("playerName"))){
+//				request.setAttribute("checkName", true);	
+
+//				request.setAttribute("login", session.getAttribute("name"));
+//				request.setAttribute("showForm", true);
+//				}
+//				else{
+//					request.setAttribute("checkName", true);		
+//				}
+//				
+//			//	new PlayerServiceJPQL().addPlayer(request.getParameter("playerName"), request.getParameter("password1"));
+//			}
+		
+
+	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

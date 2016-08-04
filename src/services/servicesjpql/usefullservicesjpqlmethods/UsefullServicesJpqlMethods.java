@@ -99,5 +99,16 @@ public class UsefullServicesJpqlMethods {
 		Integer number = (int) (long) query.getSingleResult();
 		return number;
 	}
+	
+	public void addPlayerToDatabase(PlayerJPQL player){
+		JpaHelper.beginTransaction();
+		EntityManager em = JpaHelper.getEntityManager();
+		em.persist(player);
+		JpaHelper.commitTransaction();
+	}
+	
+	public void playerToDatabaseJpql(String playerName, String playerPwd){
+		addPlayerToDatabase(new PlayerJPQL(playerName,playerPwd));
+	}
 
 }

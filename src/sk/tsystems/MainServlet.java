@@ -70,25 +70,26 @@ public class MainServlet extends HttpServlet {
 			case "Stones":
 				request.setAttribute("gameName", request.getParameter("gameName"));
 				RequestDispatcher stones = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
+				request.setAttribute("hideRegistration", "hidden");
 				stones.forward(request, response);
 				break;
 			case "Minesweeper":
 				request.setAttribute("gameName", request.getParameter("gameName"));
 				RequestDispatcher minesweeper = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
+				request.setAttribute("hideRegistration", "hidden");
 				minesweeper.forward(request, response);
 				break;
 			case "GuessTheNumber":
 				request.setAttribute("gameName", request.getParameter("gameName"));
 				RequestDispatcher guessthenumber = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
+				request.setAttribute("hideRegistration", "hidden");
 				guessthenumber.forward(request, response);
 				break;
-			case "hangman":
-				request.setAttribute("gameName", request.getParameter("gameName"));
-				RequestDispatcher hangman = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
-				hangman.forward(request, response);
-				
-				
-				break;
+//			case "hangman":
+//				request.setAttribute("gameName", request.getParameter("gameName"));
+//				RequestDispatcher hangman = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
+//				hangman.forward(request, response);
+//				break;
 			case "Login":
 				request.setAttribute("gameName", request.getParameter("gameName"));
 				RequestDispatcher login = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
@@ -98,7 +99,13 @@ public class MainServlet extends HttpServlet {
 				break;
 				
 				
-			
+				
+				
+				
+				
+				
+				
+				
 				
 			}
 			if ("logMe".equals(request.getParameter("gameName"))
@@ -110,6 +117,7 @@ public class MainServlet extends HttpServlet {
 
 
 		} else {
+			request.setAttribute("hideRegistration", "hidden");
 			request.setAttribute("hideTables", "hidden");
 			request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
 		}

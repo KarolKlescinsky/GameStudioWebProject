@@ -18,9 +18,13 @@ public class PlayerJPQL {
 	public PlayerJPQL() {
 	}
 
+	public PlayerJPQL(String playerName, String playerPwd) {
+		this.playerName = playerName;
+		this.playerPwd = playerPwd;
+	}
+	
 	public PlayerJPQL(String playerName) {
 		this.playerName = playerName;
-		// this.playerPwd = playerPwd;
 	}
 
 	public int getPlayerID() {

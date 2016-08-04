@@ -17,7 +17,7 @@
 		<li><a href="?gameName=Stones">Stones</a></li>
 		<li><a href="?gameName=Minesweeper">Minesweeper</a></li>
 		<li><a href="?gameName=GuessTheNumber">GuessTheNumber</a></li>
-		<li><a href="?gameName=hangman">HangMan</a></li>
+<!-- 		<li><a href="?gameName=hangman">HangMan</a></li> -->
 		<li><a href="?gameName=Login">Login</a></li>
 	</ul>
 	<br>
@@ -56,9 +56,12 @@
 			<td>${MaxGuessTheNumber}</td>
 		</tr>
 	</table>
+	
+		<div <%=request.getAttribute("hideRegistration")%>>><jsp:include page="login.jsp" /></div>
+	
 	<br>
-	<p class="numberText">Number of total players: ${countofplayers}</p>
-	<p class="numberText">Number of total games: ${countofgames}</p>
+	<p class="numberText" <%=request.getAttribute("hideTables")%>>Number of total players: ${countofplayers}</p>
+	<p class="numberText" <%=request.getAttribute("hideTables")%>>Number of total games: ${countofgames}</p>
 
 	<div><jsp:include page="/${gameName}" /></div>
 
