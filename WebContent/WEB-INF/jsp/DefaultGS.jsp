@@ -18,7 +18,7 @@
 		<li><a href="?gameName=Minesweeper">Minesweeper</a></li>
 		<li><a href="?gameName=GuessTheNumber">GuessTheNumber</a></li>
 <!-- 		<li><a href="?gameName=hangman">HangMan</a></li> -->
-		<li><a href="?gameName=Login">Login</a></li>
+		<li><a href="?gameName=Login">Login & Registration</a></li>
 	</ul>
 	<br>
 	<table id="statsTable" <%=request.getAttribute("hideLoginTable")%>>
@@ -57,7 +57,7 @@
 		</tr>
 	</table>
 	
-		<div <%=request.getAttribute("hideRegistration")%>>><jsp:include page="login.jsp" /></div>
+		<div <%=request.getAttribute("hideRegistration")%>><jsp:include page="login.jsp" /></div>
 	
 	<br>
 	<p class="numberText" <%=request.getAttribute("hideTables")%>>Number of total players: ${countofplayers}</p>

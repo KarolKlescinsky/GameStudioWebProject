@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
 		response.setContentType("text/html");
 		HttpSession session = request.getSession();
 			
-		
+
 		if (request.getParameter("playerName")!=null) {
 			session.setAttribute("playerName", request.getParameter("playerName"));
 			session.setAttribute("password1", request.getParameter("password1"));
@@ -68,5 +68,6 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
 
 }

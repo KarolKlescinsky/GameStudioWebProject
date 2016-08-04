@@ -27,8 +27,17 @@
 <%-- </c:if> --%>
 
 
-<%-- <c:if test="${userName}"> --%>
-	<div align="center <%=session.getAttribute("isUserRegistred")%>">
+<c:if test="${playerName == null}">
+	<div align="center" <%=request.getAttribute("isUserRegistred")%>>
+		<h3>Login</h3>
+		<form>
+			<input type="hidden" name="gameName" value="${gameName}">
+			Name:<input id="originalName" id="playerName" type="text"
+				name="playerName"> <br> Password: <input id="pass1"
+				type="text" name="password1"> <br> <input type="submit"
+				value="Send name">
+
+		</form>
 		<h3>Registration</h3>
 
 		<form>
@@ -69,4 +78,4 @@
 		}
 	</script>
 
-<%-- </c:if> --%>
+</c:if>
