@@ -114,7 +114,7 @@ public class UsefullServicesJpqlMethods {
 	public boolean isUserRegistered(String playerName, String playerPwd) {
 		EntityManager em = JpaHelper.getEntityManager();
 		Query query = em.createQuery(
-				"Select p.playerName FROM PlayerJPQL p Where p.playerName=:playerName & p.playerPwd=:playerPwd");
+				"Select p.playerName FROM PlayerJPQL p Where p.playerName=:playerName AND p.playerPwd=:playerPwd");
 		query.setParameter("playerName", playerName);
 		query.setParameter("playerPwd", playerPwd);
 

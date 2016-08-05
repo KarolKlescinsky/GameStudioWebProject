@@ -24,7 +24,56 @@ public class Login extends HttpServlet {
 			
 		String action = request.getParameter("action");
 
-//		
+		if ("login".equals(action) && request.getParameter("playerName")!=null && new UsefullServicesJpqlMethods().isUserRegistered(request.getParameter("playerName"), request.getParameter("password1"))) {
+			System.out.println("podarilo sa");
+			session.setAttribute("player", request.getParameter("playerName"));
+			session.setAttribute("userLoggedIn", "hidden");
+		} else if("register".equals(action) && !request.getParameter("playerName").trim().isEmpty() && !request.getParameter("password1").trim().isEmpty()){
+			new UsefullServicesJpqlMethods().playerToDatabaseJpql(request.getParameter("playerName"), request.getParameter("password1"));
+			request.setAttribute("isUserRegistred", "hidden");
+		}else if("logout".equals(action)){
+			session.setAttribute("player", null);
+		}
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 //		if ("login".equals(action) && "userName" != null && "userPassword" != null) {
 //
 //			user = new UsefullServicesJpqlMethods()
@@ -36,16 +85,10 @@ public class Login extends HttpServlet {
 //		}
 //
 //		if (request.getParameter("playerName")!=null) {
-//			session.setAttribute("playerName", request.getParameter("playerName"));
-//			new UsefullServicesJpqlMethods().playerToDatabaseJpql(request.getParameter("playerName"), request.getParameter("password1"));
-//			session.setAttribute("isUserRegistred", "hidden");
+
 //		}
 		
-		if(new UsefullServicesJpqlMethods().isUserRegistered(request.getParameter("playerName"), request.getParameter("password1"))){
-			
-		} else {
-			
-		}
+
 		
 		
 	//	request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);

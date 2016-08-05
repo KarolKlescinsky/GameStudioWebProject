@@ -29,9 +29,8 @@ public class MainServlet extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -57,7 +56,6 @@ public class MainServlet extends HttpServlet {
 		request.setAttribute("CountPlayerGuessTheNumber",
 				new UsefullServicesJpqlMethods().countOfPlayers("GuessTheNumber"));
 
-		
 		request.setAttribute("MaxMinesweeper", new ScoreJpqlMethods().highScore("Minesweeper"));
 		request.setAttribute("MaxStones", new ScoreJpqlMethods().highScore("Stones"));
 		request.setAttribute("MaxGuessTheNumber", new ScoreJpqlMethods().highScore("GuessTheNumber"));
@@ -85,11 +83,13 @@ public class MainServlet extends HttpServlet {
 				request.setAttribute("hideRegistration", "hidden");
 				guessthenumber.forward(request, response);
 				break;
-//			case "hangman":
-//				request.setAttribute("gameName", request.getParameter("gameName"));
-//				RequestDispatcher hangman = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
-//				hangman.forward(request, response);
-//				break;
+			// case "hangman":
+			// request.setAttribute("gameName",
+			// request.getParameter("gameName"));
+			// RequestDispatcher hangman =
+			// request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
+			// hangman.forward(request, response);
+			// break;
 			case "Login":
 				request.setAttribute("gameName", request.getParameter("gameName"));
 				RequestDispatcher login = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
@@ -97,24 +97,13 @@ public class MainServlet extends HttpServlet {
 				request.setAttribute("hideLoginTable", "hidden");
 				login.forward(request, response);
 				break;
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			}
-//			if ("logMe".equals(request.getParameter("gameName"))
-//					&& !request.getParameter("userName").trim().isEmpty()) {
-//
-//				session.setAttribute("player", request.getParameter("userName"));
-//				request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
-//			}
 
+			}
+			
+			
+			
+			
+			
 
 		} else {
 			request.setAttribute("hideRegistration", "hidden");
@@ -122,8 +111,6 @@ public class MainServlet extends HttpServlet {
 			request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
 		}
 
-		
-		
 	}
 
 	/**
