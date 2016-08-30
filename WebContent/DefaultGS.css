@@ -9,7 +9,7 @@ h2 {
 }
 
 body {
-	background-color: #3399ff;
+	background-color: #00e600;
 }
 
 a:link {
@@ -39,11 +39,17 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	border: 1px solid #e7e7e7;
-	background-color: rgb(23, 183, 230);
+	background-color:  #0040ff;
+	color: #00e600;
 }
 
 li {
 	float: left;
+}
+
+.menu {
+	color: #00e600;
+	text-decoration: none;
 }
 
 li a {
@@ -57,10 +63,14 @@ li a {
 li
 
 
+
  
 
 
+
 a
+
+
 
 
 
@@ -70,17 +80,23 @@ a
 
 
 
+
+
 :not
 
 
+
  
+
 
 
 (
 .active
 
 
+
  
+
 
 
 )
@@ -90,13 +106,19 @@ background-color
 
 
 
+
+
 :
+
 
 
  
 
 
+
 #fff
+
+
 
 
 
@@ -106,7 +128,7 @@ background-color
 }
 li a.active {
 	color: #4CAF50;
-	background-color: #4CAF50;
+	background-color: #ff3300;
 }
 
 .numberText {
@@ -142,6 +164,10 @@ th, td {
 #leftPartGuess {
 	float: left;
 	min-width: 30%;
+}
+
+ul.menu {
+	color: #00e600; 
 }
 
 .out {
@@ -186,6 +212,7 @@ a.restartGame:hover, a.restartGame:active {
 	background-color: green;
 	color: white;
 }
+
 }
 #printTable {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

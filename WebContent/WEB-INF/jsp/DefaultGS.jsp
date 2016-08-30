@@ -12,13 +12,12 @@
 <body>
 
 	<h1>GameStudio</h1>
-
 	<ul>
-		<li><a href="?gameName=Stones">Stones</a></li>
-		<li><a href="?gameName=Minesweeper">Minesweeper</a></li>
-		<li><a href="?gameName=GuessTheNumber">GuessTheNumber</a></li>
+		<li><a class="menu" href="?gameName=Stones">Stones</a></li>
+		<li><a class="menu" href="?gameName=Minesweeper">Minesweeper</a></li>
+		<li><a class="menu" href="?gameName=GuessTheNumber">GuessTheNumber</a></li>
 		<!-- 		<li><a href="?gameName=hangman">HangMan</a></li> -->
-		<li><a href="?gameName=Login">Login & Registration</a></li>
+		<li><a class="menu" href="?gameName=Login">Login and Registration</a></li>
 	</ul>
 	<br>
 	<table id="statsTable" <%=request.getAttribute("hideLoginTable")%>>

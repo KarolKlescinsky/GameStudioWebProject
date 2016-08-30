@@ -92,7 +92,7 @@ public class StonesServlet extends HttpServlet {
 				if (value == FieldStones.EMPTY_CELL) {
 					out.printf(" ");
 				} else {
-					out.printf("<a href=\"?value=%d\" class=\"stones\">%2d</a>", value, value);
+					out.printf("%2d", value, value);
 				}
 			}
 		}
