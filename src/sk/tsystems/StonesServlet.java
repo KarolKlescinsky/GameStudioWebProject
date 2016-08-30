@@ -2,6 +2,7 @@ package sk.tsystems;
 
 import java.io.IOException;
 
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -16,7 +17,6 @@ import services.servicesjpql.RatingJpqlMethods;
 import services.servicesjpql.ScoreJpqlMethods;
 import services.servicesjpql.usefullservicesjpqlmethods.UsefullServicesJpqlMethods;
 import sk.tsystems.coreStones.FieldStones;
-import usefullmethods.UserLogin;
 
 /**
  * Servlet implementation class StonesServlet

@@ -172,20 +172,20 @@ th, td {
 	text-align: center;
 }
 
-/* a.restartGame:link, a.restartGame:visited { */
-/* 	background-color: white; */
-/* 	color: black; */
-/* 	border: 2px solid green; */
-/* 	padding: 10px 20px; */
-/* 	text-align: center; */
-/* 	text-decoration: none; */
-/* 	display: inline-block; */
-/* } */
+a.restartGame:link, a.restartGame:visited {
+	background-color: white;
+	color: black;
+	border: 2px solid green;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
 
-/* a.restartGame:hover, a.restartGame:active { */
-/* 	background-color: green; */
-/* 	color: white; */
-/* } */
+a.restartGame:hover, a.restartGame:active {
+	background-color: green;
+	color: white;
+}
 }
 #printTable {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

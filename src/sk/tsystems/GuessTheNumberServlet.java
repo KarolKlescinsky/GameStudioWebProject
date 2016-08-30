@@ -15,7 +15,6 @@ import services.servicesjpql.RatingJpqlMethods;
 import services.servicesjpql.ScoreJpqlMethods;
 import services.servicesjpql.usefullservicesjpqlmethods.UsefullServicesJpqlMethods;
 import sk.tsystems.guessthenumber.GuessTheNumber;
-import usefullmethods.UserLogin;
 
 /**
  * Servlet implementation class HelloWorldServlet

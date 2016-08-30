@@ -2,6 +2,7 @@ package services.servicesjpql.usefullservicesjpqlmethods;
 
 import javax.persistence.EntityManager;
 
+
 import javax.persistence.Query;
 
 import entity.entityjpql.GameJPQL;
@@ -115,6 +116,8 @@ public class UsefullServicesJpqlMethods {
 		EntityManager em = JpaHelper.getEntityManager();
 		Query query = em.createQuery(
 				"Select p.playerName FROM PlayerJPQL p Where p.playerName=:playerName AND p.playerPwd=:playerPwd");
+		System.out.println(playerName);
+		System.out.println(playerPwd);
 		query.setParameter("playerName", playerName);
 		query.setParameter("playerPwd", playerPwd);
 

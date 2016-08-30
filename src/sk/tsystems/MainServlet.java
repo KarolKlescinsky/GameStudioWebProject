@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import services.servicesjpql.CommentJpqlMethods;
 import services.servicesjpql.RatingJpqlMethods;
@@ -30,14 +29,12 @@ public class MainServlet extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();
 
 		request.setAttribute("AvgMinesweeper", new RatingJpqlMethods().averageRating("Minesweeper"));
 		request.setAttribute("AvgStones", new RatingJpqlMethods().averageRating("Stones"));
@@ -95,22 +92,14 @@ public class MainServlet extends HttpServlet {
 				RequestDispatcher login = request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp");
 				request.setAttribute("hideTables", "hidden");
 				request.setAttribute("hideLoginTable", "hidden");
-				login.forward(request, response);
+				login.include(request, response);
 				break;
-
 			}
-			
-			
-			
-			
-			
-
 		} else {
 			request.setAttribute("hideRegistration", "hidden");
 			request.setAttribute("hideTables", "hidden");
 			request.getRequestDispatcher("/WEB-INF/jsp/DefaultGS.jsp").forward(request, response);
 		}
-
 	}
 
 	/**
