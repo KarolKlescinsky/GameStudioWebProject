@@ -17,7 +17,7 @@ import services.servicesjpql.usefullservicesjpqlmethods.UsefullServicesJpqlMetho
 /**
  * Servlet implementation class MainServlet
  */
-@WebServlet("/MainServlet")
+@WebServlet("")
 public class MainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

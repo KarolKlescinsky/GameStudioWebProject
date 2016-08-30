@@ -48,7 +48,7 @@ public class StonesServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		FieldStones fieldStones = (FieldStones) session.getAttribute("fieldStones");
-		if (fieldStones == null) {
+		if (fieldStones == null || request.getParameter("newGame") != null) {
 			fieldStones = new FieldStones(4, 4);
 			startTime = System.currentTimeMillis();
 			session.setAttribute("fieldStones", fieldStones);

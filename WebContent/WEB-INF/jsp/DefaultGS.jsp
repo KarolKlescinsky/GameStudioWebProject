@@ -17,7 +17,8 @@
 		<li><a class="menu" href="?gameName=Minesweeper">Minesweeper</a></li>
 		<li><a class="menu" href="?gameName=GuessTheNumber">GuessTheNumber</a></li>
 		<!-- 		<li><a href="?gameName=hangman">HangMan</a></li> -->
-		<li><a class="menu" href="?gameName=Login">Login and Registration</a></li>
+		<li><a class="menu" href="?gameName=Login">Login and
+				Registration</a></li>
 	</ul>
 	<br>
 	<table id="statsTable" <%=request.getAttribute("hideLoginTable")%>>
@@ -56,9 +57,9 @@
 		</tr>
 	</table>
 
-	<div <%=request.getAttribute("hideRegistration")%>><jsp:include
-			page="login.jsp" /></div>
-
+	<div <%=request.getAttribute("hideRegistration")%>>
+		<jsp:include page="login.jsp" />
+	</div>
 
 
 
@@ -68,13 +69,17 @@
 	<p class="numberText" <%=request.getAttribute("hideTables")%>>Number
 		of total games: ${countofgames}</p>
 
+<c:if test="${gameName != null}">
 	<div><jsp:include page="/${gameName}" /></div>
+</c:if>
 
 	<div class="out">
-		<div class="leftPart" <%=request.getAttribute("hideTables")%>><jsp:include
-				page="Comment.jsp" /></div>
-		<div class="rightPart" <%=request.getAttribute("hideTables")%>><jsp:include
-				page="Score.jsp" /></div>
+		<div class="leftPart" <%=request.getAttribute("hideTables")%>>
+		<jsp:include page="Comment.jsp" />
+		</div>
+		<div class="rightPart" <%=request.getAttribute("hideTables")%>>
+		<jsp:include page="Score.jsp" />
+		</div>
 	</div>
 
 </body>
